@@ -1,0 +1,202 @@
+:root {
+    --primary-color: #2314f1;
+    --secondary-color: #a59674;
+    --dark-grey: #2b2b2b;
+    --footer-color: #f81a1a;
+    --font-weight:lighter;
+  }
+
+
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: lightgray;
+  background-image: image();
+  }
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 2%
+}
+a {
+  color: var(--dark-grey);
+}
+a:hover {
+  text-decoration: none;
+}
+h1 {
+  font-size: 30px;
+  font-weight: var(--font-weight);
+}
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  color: #123456789
+}
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px lightskyblue;
+}
+button:active {
+  background-color: #333;
+  border-color: #333;
+  color: #eee;
+}
+.points{
+  color: var(--primary-color)
+}
+span {
+  background-color: lightblue;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-gap: 20px;
+}
+.grid__item {
+  border: dotted;
+  background-color: var(--secondary-color);
+  width: auto;
+  min-height: auto;
+  margin: 0;
+}
+.profilepic{
+  float: left;
+  border-radius: 50%;
+  max-width: 700px;
+  margin: 10px;
+}
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  text-align: right;
+}
+.imagerandom{
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+  text-align: right;
+  list-style-type: none;
+}
+.page-footer {
+  color:var(--footer-color) ;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-basis: 200px
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  .h1 {
+    font-size: 22px;
+  }
+}
+.imagerandom {
+  width: 100px;
+  height: 100px;
+  transition: width 2s, height 2s, transform 2s;
+}
+.imagerandom:hover {
+  width: 300px;
+  height: 100px;
+  transform: Scale(1,1);
+  }
+  a {
+  color: var(--primary-color);
+  transition: all 0.2s linear;
+  }
+  a:hover, a:focus {
+  color: red;
+  }
+.button, button {
+  border:solid;
+  display: inline-block;
+  font-family: inherit;
+  background-color: #357b70;
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+  transition-duration: 0.2s;
+  transition-property: opacity;
+  cursor: pointer;
+  opacity: 0.8;
+}
+p {
+  animation-duration: 4s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.trial {
+display: flex;
+}
+
+.trial {
+    display:flex;
+    position: relative;
+    justify-content: flex-end;
+}
+@keyframes color-change-logo {
+        from {
+          fill: #0000FF;
+        }
+        to {
+          fill: #39FF14;
+        }
+      }
+
+      @keyframes color-change-outline {
+        from {
+          fill: #D6D6D6;
+        }
+        to {
+          fill: #F2C4CE;
+        }
+      }
+
+      .mug-logo {
+        animation-duration: 400ms;
+        animation-name: color-change-logo;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+      }
+
+      .mug-outline {
+        animation-duration: 10s;
+        animation-name: color-change-outline;
+        animation-timing-function: ease-in;
+      }
