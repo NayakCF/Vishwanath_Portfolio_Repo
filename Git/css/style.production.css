@@ -33,7 +33,7 @@
   button:hover {
     cursor: pointer;
     opacity: 0.8;
-    color: #123456789
+    color: grey;
   }
   button:focus {
     outline: none;
